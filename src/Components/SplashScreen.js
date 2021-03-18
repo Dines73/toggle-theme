@@ -53,12 +53,13 @@ function Splash(props) {
   }
 
   const icon = props.theme === "light" ? <HiMoon size={40} /> : <CgSun size={40} />
+  const onOff = props.theme === "light" ? `Switch the light off` : `Switch the light on`
 
   return (
     <Page>
       <Container>
         <Toggle onClick={changeTheme}>{icon}</Toggle>
-        <Title>Switch the light</Title>
+        <Title>{onOff}</Title>
         <TagLine>Level up your web development skills!</TagLine>
       </Container>
     </Page>
